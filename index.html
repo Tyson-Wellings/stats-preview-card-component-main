@@ -19,38 +19,46 @@
 <body>
   <div id="background">
     <div id="display-card-container">
-      <div id="left-desktop-side">
-        <div id="headline-plus-copy">
-          <h1>Get insights that help your business grow.</h1>
+      <div id="left-desktop-side-container">
+        <div id="left-desktop-side">
+          <div id="headline-plus-copy">
+            <h1>Get <span>insights </span>that help your business grow.</h1>
 
-          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-          experience, and overall efficiency.
-          </p>
-        </div>
-        
-        <div class="stats">
-          <h2>10k+</h2> 
-          <p>companies</p>
-        </div>
+            <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+            experience, and overall efficiency.
+            </p>
+          </div>
+          
+          <div class="stats">
+            <h2>10k+</h2> 
+            <p>companies</p>
+          </div>
 
-        <div class="stats">
-          <h2>314</h2> 
-          <p>templates</p>
-        </div>
+          <div class="stats">
+            <h2>314</h2> 
+            <p>templates</p>
+          </div>
 
-        <div class="stats">
-          <h2>12m+</h2> 
-          <p>queries</p>
+          <div class="stats">
+            <h2>12m+</h2> 
+            <p>queries</p>
+          </div>
         </div>
       </div>
       <div id="right-desktop-side">
-        <img src="images/image-header-desktop.jpg">
-      </div>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Tyson Wellings</a>.
+        <img srcset="images/image-header-desktop.jpg 540w,
+             images/image-header-mobile.jpg 654w"
+             sizes="(max-width: 375px) 654px,
+                    540px"
+             src="images/image-header-desktop.jpg"
+             alt="office people collaborating on a project">
       </div>
     </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Tyson Wellings</a>.
+    </div>
+
   </div>
 </body>
 </html>
