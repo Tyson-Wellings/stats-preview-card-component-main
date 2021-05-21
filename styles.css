@@ -1,5 +1,6 @@
 *{
     margin:0;
+    padding: 0;
 }
 h1{
     font-family: "Inter", sans-serif;
@@ -21,6 +22,68 @@ p{
     font-weight: 400;
     color: hsla(0, 0%, 100%, 0.75);
 }
+
+
+#background{
+    background-color: hsl(233, 47%, 7%);
+    width: 100vw;
+    position: relative;
+    padding: 10% 0 5% 0;
+    top: 0;
+    box-sizing: border-box;
+    
+}
+
+#display-card-container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+    align-content: center;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+}
+
+#image-container img{
+    object-fit: cover;
+    opacity: 0.3;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+#image-container{
+    background: hsl(277, 64%, 61%);
+    display: inline-block;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+#left-desktop-side-container{
+    background-color: hsl(244, 38%, 16%);
+    flex-grow: 1;
+    flex-basis: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+    padding: 10%;
+    text-align: center;  
+}
+
+#left-desktop-side{
+    box-sizing: border-box;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
 
 .stats p{
     font-family: "Lexend Deca", sans-serif;
@@ -52,116 +115,61 @@ p{
     margin: 5px 0;
 }
 
-#background{
-    background-color: hsl(233, 47%, 7%);
-    width: 100vw;
-    height: 100vh;
+.attribution{
     position: relative;
-    
-}
-
-#left-desktop-side-container{
-    background-color: hsl(244, 38%, 16%);
-    flex-grow: 1;
-    flex-basis: 0;
-    width: 50%;
-    max-height: 456px;
-    max-width: 540px;
-    border-radius: 10px 0 0 10px;
-    
-    
-       
-}
-
-#left-desktop-side{
-    box-sizing: border-box;
-    padding: 18%;
-    border-radius: inherit;
-    display: flex;
-    flex-direction: row;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    display: block;
     width: 100%;
-    max-height: 456px;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-}
-#right-desktop-side{
-    background: hsl(277, 64%, 61%);
-    display: inline-block;
-    flex-grow: 1;
-    flex-basis: 0;
-    border-radius: 10px;
-    width: 50%;
-    max-width: 540px;
-    max-height: 456px;
-    overflow: hidden;
+    left: 50%; 
+    margin-left: -50%;
 }
 
-#right-desktop-side img{
-    object-fit: cover;
-    opacity: 0.3;
-    border-radius: 10px;
-    height: 100%;
-    
-}
+@media only screen and (min-width: 375px) {
 
-#display-card-container{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    width: 75%;
-    height: 60%;
-    max-height: 456px;
-    max-width: 1080px;
-    background-color: hsl(244, 38%, 16%);
-    border-radius: 10px;
-    align-content: center;
-    justify-content: space-evenly;
+    *{
+        text-align: left;
+    }
 
-}
-
-@media only screen and (max-width: 375px) {
-
-    body{
-        text-align: center;
+    #background{
+        height: 100vh;
+        padding: 10% 0;
     }
     #display-card-container{
-        flex-direction: column-reverse;
-        flex-wrap: nowrap;
-        width: 90%;
-        align-items: center; 
-        
+        width: 70%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
-    
+    #image-container{
+        width: 50%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    #image-container img{
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+
 
     #left-desktop-side-container{
-        width: 100%;
-        
+        padding: 4%;
+        width: 50%;
     }
 
     #left-desktop-side{
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: 100%;
-        align-items: center; 
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    #headline-plus-copy{
-        flex-grow: 1;
-    }
-
-    #right-desktop-side{
-        position: relative;
-        
-
-    }
-    #right-desktop-side img{
-        width: 100%;
-        position: relative;
-        
+    .attribution{
+        position:absolute;
+        bottom: 0;
     }
   }
